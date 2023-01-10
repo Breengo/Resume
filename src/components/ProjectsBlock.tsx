@@ -3,15 +3,14 @@ import styled, { keyframes } from "styled-components";
 import { setCurrentPage } from "../redux/slices/currentPageSlice";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../redux/store";
-import { PageWrapper } from "./AboutBlock";
 
 const appearAnimation = keyframes`
   0%{
-height:0%;
+    opacity: 0;
   }
 
   100%{
-    height:50%;
+    opacity: 1;
   }
 `;
 
@@ -29,6 +28,21 @@ const textAppearAnimation = keyframes`
   }
 `;
 
+const PageWrapper = styled.div`
+  width: 100%;
+
+  @media (min-width: 1000px) {
+    padding-top: 2%;
+  }
+  @media (min-width: 1400px) {
+    height: 90vh;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+`;
+
 const ProjectContainer = styled.a`
   position: relative;
   border-radius: 10px;
@@ -36,8 +50,12 @@ const ProjectContainer = styled.a`
   color: #ffffff;
   cursor: pointer;
   margin: 3%;
-  height: 50%;
-  width: 40%;
+  padding: 3%;
+  @media (min-width: 1900px) {
+    width: 50vh;
+  }
+  width: 85vh;
+  height: 50vh;
   box-shadow: inset 0px 0px 20px #00ffaa, inset 5px 5px 20px #00ffaa,
     inset 20px 20px 200px #00ffaa, 0 0 20px #00ffaa, 5px 5px 40px #00ffaa;
   background: linear-gradient(60deg, #0cfa4779, #10f3cd79);
@@ -49,20 +67,29 @@ const ProjectContainer = styled.a`
   }
   h1 {
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
+    @media (min-width: 650px) {
+      font-size: 3em;
+    }
     height: 15%;
     margin: 1% 0 1% 0;
     animation: ${textAppearAnimation} 0.5s linear;
   }
   h2 {
-    font-size: 2em;
+    @media (min-width: 650px) {
+      font-size: 2em;
+    }
+    font-size: 1.5em;
     height: 60%;
     margin: 2%;
     animation: ${textAppearAnimation} 0.5s linear;
   }
   h3 {
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
+    @media (min-width: 650px) {
+      font-size: 3em;
+    }
     height: 10%;
     margin: 1% 0 1% 0;
     animation: ${textAppearAnimation} 0.5s linear;

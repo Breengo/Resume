@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { AppDispatch } from "../redux/store";
 
 type LineWrapperType = {
-  size?: string;
   delay?: string;
 };
 
@@ -28,7 +27,7 @@ const appearAnimation = keyframes`
 `;
 
 const TextBlock = styled.div`
-  width: 80%;
+  width: 90%;
   display: flex;
   list-style-type: none;
   justify-content: center;
@@ -41,7 +40,26 @@ const LineWrapper = styled.h1<LineWrapperType>`
   margin: 0.2em;
   position: relative;
   color: transparent;
-  font-size: ${(props) => props.size};
+  font-size: 0.4em;
+
+  @media (min-width: 400px) {
+    font-size: 0.6em;
+  }
+
+  @media (min-width: 650px) {
+    font-size: 1em;
+  }
+
+  @media (min-width: 800px) {
+    font-size: 1.2em;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 1.5em;
+  }
+  @media (min-width: 1300px) {
+    font-size: 2em;
+  }
   &::before {
     content: attr(data-text);
     position: absolute;
@@ -65,26 +83,20 @@ export default function AboutBlock() {
   return (
     <PageWrapper>
       <TextBlock>
-        <LineWrapper size="2.5em" data-text="Hello, my name is Sergey">
+        <LineWrapper data-text="Hello, my name is Sergey">
           Hello, my name is Sergey
         </LineWrapper>
-        <LineWrapper
-          delay=".8s"
-          size="2.5em"
-          data-text="I am Frontend-developer"
-        >
+        <LineWrapper delay=".8s" data-text="I am Frontend-developer">
           I am Frontend-developer
         </LineWrapper>
         <LineWrapper
           delay="1.6s"
-          size="2.5em"
           data-text=" I am very intersted in programming"
         >
           I am very intersted in programming
         </LineWrapper>
         <LineWrapper
           delay="2.4s"
-          size="2em"
           data-text="I have plans to become fullstack-developer"
         >
           I have plans to become fullstack-developer

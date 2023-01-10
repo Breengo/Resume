@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components";
 import { setCurrentPage } from "../redux/slices/currentPageSlice";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../redux/store";
-import { PageWrapper } from "./AboutBlock";
 
 type SkillBlockType = {
   delay?: string;
@@ -43,24 +42,71 @@ const blurAnimation = keyframes`
   }
 `;
 
+const PageWrapper = styled.div`
+  overflow: hidden;
+  width: 100%;
+  @media (min-width: 1000px) {
+    height: 90vh;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const SkillPage = styled.div`
+  @media (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 1900px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  @media (max-width: 1000px) {
+    margin-bottom: 5%;
+  }
+`;
+
 const SkillBlock = styled.div<SkillBlockType>`
-  margin: 2%;
+  @media (max-width: 1000px) {
+    margin-top: 5%;
+  }
+  margin: 0 auto;
   border-radius: 10px;
   transform: translate(0, 800px);
   position: relative;
-  padding: 1%;
+  padding: 5%;
   display: flex;
   list-style-type: none;
   flex-direction: column;
   animation: ${blurAnimation} 0.4s ease-in;
   animation-delay: ${(props) => props.delay || 0};
   background-color: #00ffaa1c;
+  @media (min-width: 700px) {
+    box-shadow: inset 0px 0px 20px #00ffaa, inset 5px 5px 20px #00ffaa,
+      inset 20px 20px 200px #00ffaa, 0 0 20px #00ffaa, 5px 5px 40px #00ffaa;
+  }
+
   box-shadow: inset 0px 0px 20px #00ffaa, inset 5px 5px 20px #00ffaa,
-    inset 20px 20px 200px #00ffaa, 0 0 20px #00ffaa, 5px 5px 40px #00ffaa;
+    inset 20px 20px 200px #00ffaa, 0 0 20px #00ffaa;
   animation-fill-mode: forwards;
   z-index: 2;
-  width: 20%;
   height: 40%;
+  @media (min-width: 1900px) {
+    height: 40%;
+    width: 85%;
+  }
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  height: 80%;
+  width: 95%;
   h1 {
     text-align: center;
     font-size: 3em;
@@ -97,38 +143,40 @@ export default function SkillsBlock() {
   }, []);
   return (
     <PageWrapper>
-      <SkillBlock>
-        <h1>Styling</h1>
-        <h2>HTML</h2>
-        <h2>CSS</h2>
-        <h2>SCSS</h2>
-        <h2>Tailwind</h2>
-        <h2>Styled Components</h2>
-      </SkillBlock>
-      <SkillBlock delay="0.1s">
-        <h1>Frontend</h1>
-        <h2>JavaScript</h2>
-        <h2>TypeScript</h2>
-        <h2>Axios</h2>
-        <h2>React</h2>
-        <h2>Redux</h2>
-      </SkillBlock>
-      <SkillBlock delay="0.2s">
-        <h1>Backend</h1>
-        <h2>NodeJS</h2>
-        <h2>PostgreSQL</h2>
-        <h2>MongoDB</h2>
-        <h2>Express</h2>
-        <h2>JWT</h2>
-      </SkillBlock>
-      <SkillBlock delay="0.3s">
-        <h1>General</h1>
-        <h2>Docker</h2>
-        <h2>npm</h2>
-        <h2>git</h2>
-        <h2>HTTP/HTTPS</h2>
-        <h2>English B1</h2>
-      </SkillBlock>
+      <SkillPage>
+        <SkillBlock>
+          <h1>Styling</h1>
+          <h2>HTML</h2>
+          <h2>CSS</h2>
+          <h2>SCSS</h2>
+          <h2>Tailwind</h2>
+          <h2>Styled Components</h2>
+        </SkillBlock>
+        <SkillBlock delay="0.1s">
+          <h1>Frontend</h1>
+          <h2>JavaScript</h2>
+          <h2>TypeScript</h2>
+          <h2>Axios</h2>
+          <h2>React</h2>
+          <h2>Redux</h2>
+        </SkillBlock>
+        <SkillBlock delay="0.2s">
+          <h1>Backend</h1>
+          <h2>NodeJS</h2>
+          <h2>PostgreSQL</h2>
+          <h2>MongoDB</h2>
+          <h2>Express</h2>
+          <h2>JWT</h2>
+        </SkillBlock>
+        <SkillBlock delay="0.3s">
+          <h1>General</h1>
+          <h2>Docker</h2>
+          <h2>npm</h2>
+          <h2>git</h2>
+          <h2>HTTP/HTTPS</h2>
+          <h2>English B1</h2>
+        </SkillBlock>
+      </SkillPage>
     </PageWrapper>
   );
 }

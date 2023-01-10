@@ -11,13 +11,40 @@ type NavOptionTypes = {
 };
 
 const UlWrapper = styled.ul`
-  width: 50%;
-  padding-top: 5vh;
+  padding-top: 3vh;
+  width: 100%;
   font-weight: bold;
   display: flex;
   list-style-type: none;
   justify-content: space-evenly;
-  font-size: 2em;
+
+  @media (min-width: 450px) {
+    font-size: 1em;
+  }
+
+  @media (min-width: 450px) {
+    font-size: 1.1em;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 1.3em;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 1.5em;
+  }
+
+  @media (min-width: 700px) {
+    padding-top: 5vh;
+    font-size: 1.8em;
+  }
+  @media (min-width: 900px) {
+    font-size: 2em;
+  }
+
+  @media (min-width: 1800px) {
+    font-size: 3em;
+  }
 `;
 
 const NavbarWrapper = styled.div`
