@@ -6,4 +6,4 @@ ____
 + Styled Components
 
 ## Demo: 
-[https://vercel.com/breengo1/resume](https://vercel.com/breengo1/resume)
+[https://resume-ivory-five.vercel.app](https://resume-ivory-five.vercel.app)
