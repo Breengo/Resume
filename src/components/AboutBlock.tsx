@@ -20,9 +20,14 @@ export const PageWrapper = styled.div`
 const appearAnimation = keyframes`
   0%{
     width:0%;
+    height: 100%;
+  }
+  99%{
+    height: 100%;
   }
   100%{
     width:100%;
+    height:fit-content;
   }
 `;
 
@@ -65,12 +70,11 @@ const LineWrapper = styled.h1<LineWrapperType>`
     position: absolute;
     color: #ffffff;
     width: 0%;
-    height: 100%;
     top: 0;
     left: 0;
     overflow: hidden;
     word-break: break-all;
-    animation: ${appearAnimation} 0.3s linear;
+    animation: ${appearAnimation} 0.2s linear;
     animation-fill-mode: forwards;
     animation-delay: ${(props) => props.delay || 0};
   }
