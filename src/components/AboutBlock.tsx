@@ -67,7 +67,9 @@ const LineWrapper = styled.h1<LineWrapperType>`
     position: absolute;
     color: #ffffff;
     width: 0%;
-    height: 105%;
+    height: 100%;
+    top: 0;
+    left: 0;
     overflow: hidden;
     word-break: break-all;
     animation: ${appearAnimation} 0.3s linear;
