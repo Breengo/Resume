@@ -33,35 +33,32 @@ const TextBlock = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
-  @media (min-width: 350px) {
-    font-size: 1em;
+  font-size: 0.4em;
+  @media (min-width: 400px) {
+    font-size: 0.6em;
   }
   @media (min-width: 500px) {
-    font-size: 1.5em;
+    font-size: 0.7em;
   }
   @media (min-width: 680px) {
-    font-size: 2em;
+    font-size: 1em;
   }
 
   @media (min-width: 1000px) {
-    font-size: 3em;
+    font-size: 1.5em;
   }
 
   @media (min-width: 1350px) {
-    font-size: 4em;
+    font-size: 2em;
   }
-  @media (min-width: 1650px) {
-    font-size: 5em;
+  @media (min-width: 2040px) {
+    font-size: 3em;
   }
 `;
 
 const LineWrapper = styled.h1<LineWrapperType>`
-  margin-bottom: 0.5em;
   position: relative;
   color: transparent;
-  font-size: 0.8em;
-
   &::before {
     content: attr(data-text);
     position: absolute;
