@@ -11,7 +11,7 @@ type LineWrapperType = {
 export const PageWrapper = styled.div`
   overflow: hidden;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

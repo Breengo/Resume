@@ -30,10 +30,10 @@ const textAppearAnimation = keyframes`
 
 const PageWrapper = styled.div`
   width: 100%;
-
-  @media (min-width: 1000px) {
-    padding-top: 2%;
+  @media (min-width: 600px) {
+    padding-top: 10vh;
   }
+  padding-top: 5vh;
   @media (min-width: 1400px) {
     height: 90vh;
   }
@@ -44,7 +44,6 @@ const PageWrapper = styled.div`
 `;
 
 const ProjectContainer = styled.a`
-  position: relative;
   border-radius: 10px;
   text-decoration: none;
   color: #ffffff;
@@ -67,11 +66,11 @@ const ProjectContainer = styled.a`
   h1 {
     text-align: center;
     font-size: 2em;
+    text-shadow: 0 0 1px #ffffff, 0px 0px 2px #ffffff, 0px 0px 4px #ffffff;
     @media (min-width: 650px) {
       font-size: 3em;
     }
-    height: 15%;
-    margin: 1% 0 1% 0;
+    margin: 1% 0 5% 0;
     animation: ${textAppearAnimation} 0.5s linear;
   }
   h2 {
@@ -79,18 +78,17 @@ const ProjectContainer = styled.a`
       font-size: 2em;
     }
     font-size: 1.5em;
-    height: 70%;
     margin: 2%;
     animation: ${textAppearAnimation} 0.5s linear;
   }
   h3 {
     text-align: center;
     font-size: 2em;
+    text-shadow: 0 0 1px #ffffff, 0px 0px 2px #ffffff, 0px 0px 4px #ffffff;
     @media (min-width: 650px) {
       font-size: 3em;
     }
-    height: 10%;
-    margin: 1% 0 1% 0;
+    margin: 5% 0 1% 0;
     animation: ${textAppearAnimation} 0.5s linear;
   }
 `;

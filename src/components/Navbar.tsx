@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { setCurrentPage } from "../redux/slices/currentPageSlice";
 import { RootState } from "../redux/store";
 
 type NavOptionTypes = {
@@ -11,6 +10,7 @@ type NavOptionTypes = {
 };
 
 const UlWrapper = styled.ul`
+  position: absolute;
   padding-top: 3vh;
   width: 100%;
   font-weight: bold;

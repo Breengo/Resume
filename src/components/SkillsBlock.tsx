@@ -45,8 +45,12 @@ const blurAnimation = keyframes`
 const PageWrapper = styled.div`
   overflow: hidden;
   width: 100%;
+  @media (min-width: 600px) {
+    padding-top: 10vh;
+  }
+  padding-top: 5vh;
   @media (min-width: 1000px) {
-    height: 90vh;
+    height: 100vh;
   }
   display: flex;
   justify-content: center;
