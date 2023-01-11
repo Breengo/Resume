@@ -109,12 +109,21 @@ const SkillBlock = styled.div<SkillBlockType>`
   width: 95%;
   h1 {
     text-align: center;
-    font-size: 3em;
+    @media (min-width: 400px) {
+      font-size: 3em;
+    }
+    @media (max-width: 400px) {
+      margin-bottom: 5%;
+    }
+    font-size: 2em;
     text-shadow: 0 0 1px #ffffff, 0px 0px 2px #ffffff, 0px 0px 4px #ffffff;
   }
   h2 {
     margin: 0.2em;
-    font-size: 2em;
+    @media (min-width: 400px) {
+      font-size: 2em;
+    }
+    font-size: 1em;
     letter-spacing: 0.1em;
     color: #ffffff;
   }
