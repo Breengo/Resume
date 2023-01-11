@@ -33,32 +33,34 @@ const TextBlock = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-size: 2em;
 `;
 
 const LineWrapper = styled.h1<LineWrapperType>`
-  margin: 0.2em;
+  margin-bottom: 0.5em;
   position: relative;
   color: transparent;
-  font-size: 0.4em;
+  font-size: 0.8em;
 
-  @media (min-width: 400px) {
-    font-size: 0.6em;
-  }
-
-  @media (min-width: 650px) {
+  @media (min-width: 350px) {
     font-size: 1em;
   }
-
-  @media (min-width: 800px) {
-    font-size: 1.2em;
+  @media (min-width: 500px) {
+    font-size: 1.5em;
+  }
+  @media (min-width: 680px) {
+    font-size: 2em;
   }
 
   @media (min-width: 1000px) {
-    font-size: 1.5em;
+    font-size: 3em;
+    text-shadow: 0 0 1px #ffffff, 0px 0px 2px #ffffff, 0px 0px 4px #ffffff;
   }
-  @media (min-width: 1300px) {
-    font-size: 2em;
+
+  @media (min-width: 1350px) {
+    font-size: 4em;
+  }
+  @media (min-width: 1650px) {
+    font-size: 5em;
   }
   &::before {
     content: attr(data-text);
@@ -71,7 +73,6 @@ const LineWrapper = styled.h1<LineWrapperType>`
     animation: ${appearAnimation} 0.3s linear;
     animation-fill-mode: forwards;
     animation-delay: ${(props) => props.delay || 0};
-    text-shadow: 0 0 1px #ffffff, 0px 0px 2px #ffffff, 0px 0px 4px #ffffff;
   }
 `;
 
