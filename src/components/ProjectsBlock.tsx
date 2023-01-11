@@ -52,10 +52,9 @@ const ProjectContainer = styled.a`
   margin: 3%;
   padding: 3%;
   @media (min-width: 1900px) {
-    width: 50vh;
+    width: 40vw;
   }
-  width: 85vh;
-  height: 50vh;
+  width: 95vw;
   box-shadow: inset 0px 0px 20px #00ffaa, inset 5px 5px 20px #00ffaa,
     inset 20px 20px 200px #00ffaa, 0 0 20px #00ffaa, 5px 5px 40px #00ffaa;
   background: linear-gradient(60deg, #0cfa4779, #10f3cd79);
@@ -80,7 +79,7 @@ const ProjectContainer = styled.a`
       font-size: 2em;
     }
     font-size: 1.5em;
-    height: 60%;
+    height: 70%;
     margin: 2%;
     animation: ${textAppearAnimation} 0.5s linear;
   }
