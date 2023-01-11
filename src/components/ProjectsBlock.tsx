@@ -48,6 +48,8 @@ const ProjectContainer = styled.a`
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
   margin: 3%;
   padding: 3%;
   @media (min-width: 1900px) {
