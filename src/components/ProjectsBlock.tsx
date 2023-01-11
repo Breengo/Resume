@@ -106,7 +106,7 @@ export default function ProjectsBlock() {
       <ProjectContainer
         rel="noopener noreferrer"
         target="_blank"
-        href="https://github.com/Breengo/CinemaProject"
+        href="https://github.com/Breengo/Cinema"
       >
         <h1>Online cinema</h1>
         <h2>
