@@ -52,6 +52,7 @@ const ProjectContainer = styled.a`
   padding: 3%;
   @media (min-width: 1900px) {
     width: 40vw;
+    height: 50vh;
   }
   width: 95vw;
   box-shadow: inset 0px 0px 20px #00ffaa, inset 5px 5px 20px #00ffaa,

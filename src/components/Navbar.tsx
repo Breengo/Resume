@@ -11,6 +11,8 @@ type NavOptionTypes = {
 
 const UlWrapper = styled.ul`
   position: absolute;
+  top: 0;
+  left: 0;
   padding-top: 3vh;
   width: 100%;
   font-weight: bold;

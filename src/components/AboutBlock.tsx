@@ -22,7 +22,7 @@ const appearAnimation = keyframes`
     width:0%;
   }
   100%{
-    width:105%;
+    width:100%;
   }
 `;
 
@@ -33,13 +33,6 @@ const TextBlock = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-`;
-
-const LineWrapper = styled.h1<LineWrapperType>`
-  margin-bottom: 0.5em;
-  position: relative;
-  color: transparent;
-  font-size: 0.8em;
 
   @media (min-width: 350px) {
     font-size: 1em;
@@ -53,7 +46,6 @@ const LineWrapper = styled.h1<LineWrapperType>`
 
   @media (min-width: 1000px) {
     font-size: 3em;
-    text-shadow: 0 0 1px #ffffff, 0px 0px 2px #ffffff, 0px 0px 4px #ffffff;
   }
 
   @media (min-width: 1350px) {
@@ -62,6 +54,14 @@ const LineWrapper = styled.h1<LineWrapperType>`
   @media (min-width: 1650px) {
     font-size: 5em;
   }
+`;
+
+const LineWrapper = styled.h1<LineWrapperType>`
+  margin-bottom: 0.5em;
+  position: relative;
+  color: transparent;
+  font-size: 0.8em;
+
   &::before {
     content: attr(data-text);
     position: absolute;
