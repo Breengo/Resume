@@ -57,6 +57,7 @@ const TextBlock = styled.div`
 `;
 
 const LineWrapper = styled.h1<LineWrapperType>`
+  margin-top: 30px;
   position: relative;
   color: transparent;
   &::before {
