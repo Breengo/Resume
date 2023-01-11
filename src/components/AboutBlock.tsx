@@ -21,13 +21,16 @@ const appearAnimation = keyframes`
   0%{
     width:0%;
     height: 100%;
+    overflow: hidden;
   }
   99%{
     height: 100%;
+    overflow: hidden;
   }
   100%{
     width:100%;
     height:fit-content;
+    overflow:visible;
   }
 `;
 
@@ -69,10 +72,10 @@ const LineWrapper = styled.h1<LineWrapperType>`
     content: attr(data-text);
     position: absolute;
     color: #ffffff;
+    overflow: hidden;
     width: 0%;
     top: 0;
     left: 0;
-    overflow: hidden;
     word-break: break-all;
     animation: ${appearAnimation} 0.2s linear;
     animation-fill-mode: forwards;
